@@ -1,0 +1,16 @@
+App::Hashl 0.2 - Mon May 23 2011
+
+    * The internal representation of ignored hashes was changed
+    * hashl update no longer re-adds ignored (but existing) files
+    * hashl update tries to save its state when being interrupted
+      (sigint/sigterm)
+    * add hashl -f update - update db, unignore and add any ignored files in
+      the scanned directory
+
+hashl 0.1 - Fri May 06 2011
+
+    * Initial release
+    * Create/Update hash database
+    * Find/Copy files not in database
+    * Ignore files (will be marked as known, but can be removed from the file
+      system)

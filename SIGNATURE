@@ -1,0 +1,37 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.68.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 33e5933544b7320568568d06ed9c52d868820bad Build.PL
+SHA1 cc97e889a41642cf85ee5f78e5ab4f1f81af9c00 COPYING
+SHA1 374d410cecb359b8b421f05b503cc746cbd6f3d4 Changelog
+SHA1 b01080dae6b1645aad04be684210d46999685de8 MANIFEST
+SHA1 bcf6c29800483e7705038118602455c54b9db485 META.yml
+SHA1 fdb8958d4900c2ef0025aa3c28490c5c56a0eb26 README
+SHA1 372bf7051691ca12dc402be52c6e3de25e4a44e6 bin/hashl
+SHA1 0ea838893ad92df52f58a837401d902cf51c67b0 lib/App/Hashl.pm
+SHA1 a6d4088f568c71b5617a8d88a45be37e1b7b38a6 t/00-compile.t
+SHA1 fc484e69e1a91c4c501199b88a1275c64828ff32 t/10-pod-coverage.t
+SHA1 52ce242b66cf3b1fdb95fd00f687bfa09fbbb6aa t/29-app-hashl.t
+SHA1 c6028a53bd95983bb57122a93902143247693330 t/in/1k
+SHA1 8806e242d9ccb7dbfd58a50f022a2451b269bf6b t/in/1k-firsthalf
+SHA1 f1d2d2f924e986ac86fdf7b36c94bcdf32beec15 t/in/4
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iEYEARECAAYFAk3avzcACgkQjuWtMO0ss39PtgCfcSXe6yQtUGtpyUReJuVhcAY1
+rBQAn1tsKx+mZYhrB+g+seuAh8CDv5HS
+=eb00
+-----END PGP SIGNATURE-----
