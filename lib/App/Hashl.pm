@@ -7,7 +7,7 @@ use 5.010;
 use Digest::SHA qw(sha1_hex);
 use Storable qw(nstore retrieve);
 
-our $VERSION = '0.2';
+our $VERSION = '1.00';
 
 sub new {
 	my ( $obj, %conf ) = @_;
@@ -46,6 +46,11 @@ sub si_size {
 sub hash_file {
 	my ( $self, $file ) = @_;
 	my $data;
+
+	# read() fails for empty files
+	if ( ( stat($file) )[7] == 0 ) {
+		return sha1_hex();
+	}
 
 	#<<< perltidy has problems indenting 'or die' with tabs
 
@@ -194,7 +199,7 @@ App::Hashl - Partially hash files, check if files are equal etc.
 
 =head1 VERSION
 
-This manual documents App::Hashl version 0.2
+This manual documents App::Hashl version 1.00
 
 =head1 DESCRIPTION
 
@@ -282,7 +287,7 @@ relateve file name to store in the database
 
 Full path to the file
 
-=item B<uningnore> => B<0>|B<1>
+=item B<unignore> => B<0>|B<1>
 
 If true: do not skip ignored files, unignore and re-add them instead
 
